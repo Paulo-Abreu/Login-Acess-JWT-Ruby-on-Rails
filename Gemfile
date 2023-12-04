@@ -31,6 +31,15 @@ gem "jbuilder"
 gem "redis", "~> 4.0"
 gem 'pg'
 
+# Gem para autenticação com Devise
+gem 'devise'
+
+# Gem para geração e verificação de tokens JWT
+gem 'jwt'
+
+# Gem para proteger sua API contra ataques CSRF
+gem 'rack-cors'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
