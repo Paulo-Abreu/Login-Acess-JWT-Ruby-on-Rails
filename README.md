@@ -19,7 +19,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
 Clone o repositório:
 ```
 git clone https://github.com/Paulo-Abreu/Login-Acess-JWT-Ruby-on-Rails-Teste-Printer-.git
-cd JWTacess
+cd Login-Acess-JWT-Ruby-on-Rails-Teste-Printer-
 ```
 Instale as dependências:
 
