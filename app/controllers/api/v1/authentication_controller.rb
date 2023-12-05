@@ -1,6 +1,6 @@
 module Api
   module V1
-    class AuthenticationController < ActionController::API
+    class AuthenticationController < ApplicationController
       def secure_endpoint
         Rails.logger.info("Usuário autenticado: #{current_user.email}")
         render json: { message: 'Acesso concedido!' }
@@ -9,7 +9,7 @@ module Api
       def login
         user = User.find_by(email: params[:email])
 
-        if user && user.valid_password?(params[:password])
+        if user && user.authenticate(params[:password])
           token = generate_token(user)
           render json: { token: token }
         else

@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
-
+  resources :users, param: :name
   namespace :api do
     namespace :v1 do
-      post 'login', to: 'authentication#login'
-      post 'logout', to: 'authentication#logout'
+      post 'auth/login', to: 'authentication#login'
+      post 'auth/logout', to: 'authentication#logout'
     end
   end
 
